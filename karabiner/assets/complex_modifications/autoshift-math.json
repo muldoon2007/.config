@@ -1,0 +1,64 @@
+{
+  "title": "Autoshift Math: Post key if pressed alone, shifted key if held down",
+  "rules": [
+    {
+      "description": "Autoshift Math Characters only: Post key if pressed alone, shifted key if held down",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "hyphen",
+            "modifiers": {
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
+          "to_if_held_down": [
+            {
+              "key_code": "hyphen",
+              "modifiers": [
+                "left_shift"
+              ],
+              "repeat": false,
+              "halt": true
+            }
+          ],
+          "to_after_key_up": [
+            {
+              "key_code": "hyphen",
+              "repeat": false
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "equal_sign",
+            "modifiers": {
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
+          "to_if_held_down": [
+            {
+              "key_code": "equal_sign",
+              "modifiers": [
+                "left_shift"
+              ],
+              "repeat": false,
+              "halt": true
+            }
+          ],
+          "to_after_key_up": [
+            {
+              "key_code": "equal_sign",
+              "repeat": false
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    }
+  ]
+}

@@ -1177,33 +1177,6 @@
         },
         {
           "from": {
-            "key_code": "quote",
-            "modifiers": {
-              "optional": [
-                "caps_lock"
-              ]
-            }
-          },
-          "to_if_held_down": [
-            {
-              "key_code": "quote",
-              "modifiers": [
-                "left_shift"
-              ],
-              "repeat": false,
-              "halt": true
-            }
-          ],
-          "to_after_key_up": [
-            {
-              "key_code": "quote",
-              "repeat": false
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
             "key_code": "comma",
             "modifiers": {
               "optional": [

@@ -6,33 +6,6 @@
       "manipulators": [
         {
           "from": {
-            "key_code": "hyphen",
-            "modifiers": {
-              "optional": [
-                "caps_lock"
-              ]
-            }
-          },
-          "to_if_held_down": [
-            {
-              "key_code": "hyphen",
-              "modifiers": [
-                "left_shift"
-              ],
-              "repeat": false,
-              "halt": true
-            }
-          ],
-          "to_after_key_up": [
-            {
-              "key_code": "hyphen",
-              "repeat": false
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {
             "key_code": "equal_sign",
             "modifiers": {
               "optional": [

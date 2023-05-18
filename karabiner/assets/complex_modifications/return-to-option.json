@@ -23,6 +23,14 @@
             {
               "key_code": "return_or_enter"
             }
+          ],
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^com\\.amazon\\.workspaces$"
+              ],
+              "type": "frontmost_application_unless"
+            }
           ]
         }
       ]

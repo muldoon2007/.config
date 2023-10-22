@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.blueorigin.workbench</string>
+	<key>connections</key>
+	<dict>
+		<key>F21B0547-C910-4B2B-A50C-0E74788F4458</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>A970E416-0970-42BA-B762-9D1415DA570D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>mmuldoon@blueorigin.com</string>
+	<key>description</key>
+	<string></string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Open Workbench</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>sql</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Open SQL Workbench</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>F21B0547-C910-4B2B-A50C-0E74788F4458</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>cd "/Users/mmuldoon/SQL Workbench/"
+r=$(java \
+	--add-opens java.desktop/com.apple.laf=ALL-UNNAMED \
+	-cp sqlworkbench.jar:ext/* \
+	-Dawt.useSystemAAFontSettings=on \
+	-Dapple.awt.showGrowBoxtrue=true \
+	-Dapple.laf.useScreenMenuBar=true \
+	-Xmx4096m \
+	-Xdock:name=SQLWorkbench/J \
+	workbench.WbStarter 2&gt;&amp;1)
+$r</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>A970E416-0970-42BA-B762-9D1415DA570D</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>A970E416-0970-42BA-B762-9D1415DA570D</key>
+		<dict>
+			<key>xpos</key>
+			<integer>390</integer>
+			<key>ypos</key>
+			<integer>155</integer>
+		</dict>
+		<key>F21B0547-C910-4B2B-A50C-0E74788F4458</key>
+		<dict>
+			<key>xpos</key>
+			<integer>200</integer>
+			<key>ypos</key>
+			<integer>155</integer>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>

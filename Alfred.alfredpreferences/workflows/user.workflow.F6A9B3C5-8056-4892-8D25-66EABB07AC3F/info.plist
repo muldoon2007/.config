@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.blueorigin.outlook.invite</string>
+	<key>connections</key>
+	<dict>
+		<key>D289468A-E6D2-4A8A-BEFC-89970B466B5B</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>E994E1F4-4BCD-4F49-8DF6-B4AFBBE4AA39</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>mmuldoon@blueorigin.com</string>
+	<key>description</key>
+	<string></string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Outlook meeting invite</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>tell application "Microsoft Outlook"		set newEvent to make new calendar event with properties {subject:"Meeting with Mickey", content:"Meeting", start time:(current date) + 1800, end time:(current date) + 3600}		make new resource attendee at newEvent with properties {email address:{address:"mmuldoon@blueorigin.com"}}	open newEventend tell
+
+tell application "System Events"
+    set frontmost of process "Microsoft Outlook" to true
+end tell</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>E994E1F4-4BCD-4F49-8DF6-B4AFBBE4AA39</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>keyword</key>
+				<string>i</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Meeting invite</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>D289468A-E6D2-4A8A-BEFC-89970B466B5B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>D289468A-E6D2-4A8A-BEFC-89970B466B5B</key>
+		<dict>
+			<key>xpos</key>
+			<integer>95</integer>
+			<key>ypos</key>
+			<integer>210</integer>
+		</dict>
+		<key>E994E1F4-4BCD-4F49-8DF6-B4AFBBE4AA39</key>
+		<dict>
+			<key>xpos</key>
+			<integer>325</integer>
+			<key>ypos</key>
+			<integer>205</integer>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.blueorigin.voicecontrol</string>
+	<key>connections</key>
+	<dict>
+		<key>8FF0DD9C-7117-4BED-BEAD-365CA4D7827C</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>AC54EA6B-9767-4D6C-A349-E2DA7E4683B6</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>D7DD2979-C9A3-4EE8-96B9-05524FCB30BA</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>AC54EA6B-9767-4D6C-A349-E2DA7E4683B6</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>mmuldoon@blueorigin.com</string>
+	<key>description</key>
+	<string></string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Enable Voice Control</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>action</key>
+				<integer>0</integer>
+				<key>argument</key>
+				<integer>0</integer>
+				<key>focusedappvariable</key>
+				<false/>
+				<key>focusedappvariablename</key>
+				<string></string>
+				<key>hotkey</key>
+				<integer>122</integer>
+				<key>hotmod</key>
+				<integer>10092544</integer>
+				<key>hotstring</key>
+				<string>F1</string>
+				<key>leftcursor</key>
+				<false/>
+				<key>modsmode</key>
+				<integer>0</integer>
+				<key>relatedAppsMode</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.hotkey</string>
+			<key>uid</key>
+			<string>D7DD2979-C9A3-4EE8-96B9-05524FCB30BA</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>vc</string>
+				<key>subtext</key>
+				<string></string>
+				<key>text</key>
+				<string>Voice Control</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>8FF0DD9C-7117-4BED-BEAD-365CA4D7827C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>-- new version
+
+do shell script "open -b com.apple.systempreferences " &amp; ¬	"/System/Library/PreferencePanes/UniversalAccessPref.prefPane"tell application "System Events"	tell its application process "System Settings"		repeat until UI element 4 of group 1 of scroll area 1 of group 1 of ¬			group 2 of splitter group 1 of group 1 of window "Accessibility" exists			delay 0.1		end repeat		click UI element 1 of group 3 of scroll area 1 of group 1 of group 2 ¬			of splitter group 1 of group 1 of window "Accessibility"		repeat until checkbox "Voice Control" of group 1 of scroll area 1 of group 1 of group 2 of splitter group 1 of group 1 of window "Voice Control" exists			delay 0.1		end repeat		click checkbox "Voice Control" of group 1 of scroll area 1 of group 1 of group 2 of splitter group 1 of group 1 of window "Voice Control"			end tellend telltell application "System Settings" to quit</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>AC54EA6B-9767-4D6C-A349-E2DA7E4683B6</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>8FF0DD9C-7117-4BED-BEAD-365CA4D7827C</key>
+		<dict>
+			<key>xpos</key>
+			<real>130</real>
+			<key>ypos</key>
+			<real>220</real>
+		</dict>
+		<key>AC54EA6B-9767-4D6C-A349-E2DA7E4683B6</key>
+		<dict>
+			<key>xpos</key>
+			<real>415</real>
+			<key>ypos</key>
+			<real>240</real>
+		</dict>
+		<key>D7DD2979-C9A3-4EE8-96B9-05524FCB30BA</key>
+		<dict>
+			<key>xpos</key>
+			<real>160</real>
+			<key>ypos</key>
+			<real>55</real>
+		</dict>
+	</dict>
+	<key>userconfigurationconfig</key>
+	<array/>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>

@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "$(fzf -m)",
+    "uid" : "820B7A8A-2514-454B-944B-D0F2FA06EA09",
+    "name" : "fzf",
+    "keyword" : "@"
+  }
+}
